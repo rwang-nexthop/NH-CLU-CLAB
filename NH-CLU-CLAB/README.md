@@ -73,6 +73,7 @@ A containerlab-based SONiC CLOS topology with 2 spines and 2 leaves, featuring B
 1. **Docker Desktop** installed on macOS
 2. **VS Code** with Remote-Containers extension
 3. **Containerlab** (will be available in devcontainer)
+4. **DevContainer**
 
 ### Option 1: Using VS Code Devcontainer (Recommended for Mac)
 
@@ -90,26 +91,6 @@ cd ~/Python/Projects/NH-CLU-CLAB
 ```
 
 ## 📦 Deployment
-
-### Quick Start (Automated)
-
-The easiest way to deploy the lab:
-
-```bash
-cd scripts
-./deploy_lab.sh
-```
-
-This automated script will:
-1. Check for and clean up any existing lab instances
-2. Deploy the containerlab topology
-3. Wait for containers to initialize
-4. Configure all interfaces, BGP, and routing
-5. Verify connectivity
-
-### Manual Deployment
-
-If you prefer manual control:
 
 #### 1. Deploy the Lab
 
