@@ -1,0 +1,59 @@
+{
+  "DEVICE_METADATA": {
+    "localhost": {
+      "hostname": "sonic2",
+      "hwsku": "Force10-S6000",
+      "type": "Router",
+      "bgp_asn": "65002",
+      "docker_routing_config_mode": "unified",
+      "frr_mgmt_framework_config": "true"
+    }
+  },
+  "FEATURE": {
+    "bgp": { "state": "enabled" }
+  },
+  "LOOPBACK_INTERFACE": {
+    "Loopback0": {},
+    "Loopback0|2.2.2.2/32": {}
+  },
+  "PORT": {
+    "Ethernet0": {"admin_status": "up"},
+    "Ethernet4": {"admin_status": "up"}
+  },
+  "INTERFACE": {
+    "Ethernet0": {},
+    "Ethernet4": {},
+    "Ethernet0|10.0.0.1/31": {},
+    "Ethernet4|192.168.2.1/24": {}
+  },
+  "BGP_GLOBALS": {
+    "default": {
+      "local_asn": "65002",
+      "router_id": "2.2.2.2",
+      "log_nbr_state_changes": "true"
+    }
+  },
+  "BGP_NEIGHBOR": {
+    "default|10.0.0.0": { "asn": "65001", "name": "sonic1", "admin_status": "up" }
+  },
+  "BGP_NEIGHBOR_AF": {
+    "default|10.0.0.0|ipv4_unicast": {
+      "admin_status": "true",
+      "route_map_in": "ALLOW_ALL",
+      "route_map_out": "ALLOW_ALL"
+    }
+  },
+  "ROUTE_MAP": {
+    "ALLOW_ALL|10": {
+      "route_operation": "permit"
+    }
+  },
+  "ROUTE_MAP_SET": {
+    "ALLOW_ALL": {}
+  },
+  "BGP_NETWORK": {
+    "default|192.168.2.0/24": {}
+  },
+  "DEVICE_NEIGHBOR": {}
+}
+

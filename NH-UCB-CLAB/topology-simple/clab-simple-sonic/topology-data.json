@@ -1,0 +1,226 @@
+{
+  "name": "simple-sonic",
+  "type": "clab",
+  "clab": {
+    "config": {
+      "prefix": "clab",
+      "mgmt": {
+        "network": "clab",
+        "bridge": "br-96f02a4c9330",
+        "ipv4-subnet": "172.20.20.0/24",
+        "ipv4-gw": "172.20.20.1",
+        "ipv6-subnet": "3fff:172:20:20::/64",
+        "ipv6-gw": "3fff:172:20:20::1",
+        "mtu": 65535,
+        "external-access": true
+      }
+    }
+  },
+  "ssh-pub-keys": ["ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBJx4ss8nxPhJuDksMikd1ud8UGeQc4bw/OThKmitgatgKgA8IqfPsOI+qRBkMf3ADtZ6JzT8wAsdL14jNh9kEf0="],
+  "nodes": {
+    "host1": {
+      "index": "0",
+      "shortname": "host1",
+      "longname": "clab-simple-sonic-host1",
+      "fqdn": "host1.simple-sonic.io",
+      "group": "",
+      "labdir": "/Users/rwang/Python/Projects/NH-UCB-CLAB/topology-simple/clab-simple-sonic/host1",
+      "kind": "linux",
+      "image": "ghcr.io/srl-labs/alpine:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.3",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::3",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-96f02a4c9330",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/Users/rwang/Python/Projects/NH-UCB-CLAB/topology-simple/clab-simple-sonic/host1",
+        "clab-node-longname": "clab-simple-sonic-host1",
+        "clab-node-name": "host1",
+        "clab-node-type": "",
+        "clab-owner": "vscode",
+        "clab-topo-file": "/Users/rwang/Python/Projects/NH-UCB-CLAB/topology-simple/simple-sonic.clab.yml",
+        "containerlab": "simple-sonic"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "host2": {
+      "index": "1",
+      "shortname": "host2",
+      "longname": "clab-simple-sonic-host2",
+      "fqdn": "host2.simple-sonic.io",
+      "group": "",
+      "labdir": "/Users/rwang/Python/Projects/NH-UCB-CLAB/topology-simple/clab-simple-sonic/host2",
+      "kind": "linux",
+      "image": "ghcr.io/srl-labs/alpine:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.5",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::5",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-96f02a4c9330",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/Users/rwang/Python/Projects/NH-UCB-CLAB/topology-simple/clab-simple-sonic/host2",
+        "clab-node-longname": "clab-simple-sonic-host2",
+        "clab-node-name": "host2",
+        "clab-node-type": "",
+        "clab-owner": "vscode",
+        "clab-topo-file": "/Users/rwang/Python/Projects/NH-UCB-CLAB/topology-simple/simple-sonic.clab.yml",
+        "containerlab": "simple-sonic"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 22,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "sonic1": {
+      "index": "2",
+      "shortname": "sonic1",
+      "longname": "clab-simple-sonic-sonic1",
+      "fqdn": "sonic1.simple-sonic.io",
+      "group": "",
+      "labdir": "/Users/rwang/Python/Projects/NH-UCB-CLAB/topology-simple/clab-simple-sonic/sonic1",
+      "kind": "sonic-vs",
+      "image": "docker-sonic-vs:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.2",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::2",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-96f02a4c9330",
+        "clab-node-group": "",
+        "clab-node-kind": "sonic-vs",
+        "clab-node-lab-dir": "/Users/rwang/Python/Projects/NH-UCB-CLAB/topology-simple/clab-simple-sonic/sonic1",
+        "clab-node-longname": "clab-simple-sonic-sonic1",
+        "clab-node-name": "sonic1",
+        "clab-node-type": "",
+        "clab-owner": "vscode",
+        "clab-topo-file": "/Users/rwang/Python/Projects/NH-UCB-CLAB/topology-simple/simple-sonic.clab.yml",
+        "containerlab": "simple-sonic"
+      },
+      "port-bindings": [
+      ]
+    },
+    "sonic2": {
+      "index": "3",
+      "shortname": "sonic2",
+      "longname": "clab-simple-sonic-sonic2",
+      "fqdn": "sonic2.simple-sonic.io",
+      "group": "",
+      "labdir": "/Users/rwang/Python/Projects/NH-UCB-CLAB/topology-simple/clab-simple-sonic/sonic2",
+      "kind": "sonic-vs",
+      "image": "docker-sonic-vs:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.4",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::4",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-96f02a4c9330",
+        "clab-node-group": "",
+        "clab-node-kind": "sonic-vs",
+        "clab-node-lab-dir": "/Users/rwang/Python/Projects/NH-UCB-CLAB/topology-simple/clab-simple-sonic/sonic2",
+        "clab-node-longname": "clab-simple-sonic-sonic2",
+        "clab-node-name": "sonic2",
+        "clab-node-type": "",
+        "clab-owner": "vscode",
+        "clab-topo-file": "/Users/rwang/Python/Projects/NH-UCB-CLAB/topology-simple/simple-sonic.clab.yml",
+        "containerlab": "simple-sonic"
+      },
+      "port-bindings": [
+      ]
+    }
+  },
+  "links": [
+    {
+      "a": {
+        "node": "sonic1",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:b6:23:13",
+        "peer": "z"
+      },
+      "z": {
+        "node": "sonic2",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:b0:33:9f",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "sonic1",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:0c:53:60",
+        "peer": "z"
+      },
+      "z": {
+        "node": "host1",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:44:1a:5f",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "sonic2",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:d1:ba:f9",
+        "peer": "z"
+      },
+      "z": {
+        "node": "host2",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:91:df:8f",
+        "peer": "a"
+      }
+    }
+  ]
+}

@@ -3,28 +3,18 @@ host1:
     username: 
     password: 
     platform: linux
-    hostname: 172.20.20.7
+    hostname: 172.20.20.3
 host2:
     username: 
     password: 
     platform: linux
-    hostname: 172.20.20.6
-leaf1:
-    username: 
-    password: 
-    platform: sonic-vs
-    hostname: 172.20.20.3
-leaf2:
-    username: 
-    password: 
-    platform: sonic-vs
     hostname: 172.20.20.5
-spine1:
+sonic1:
     username: 
     password: 
     platform: sonic-vs
     hostname: 172.20.20.2
-spine2:
+sonic2:
     username: 
     password: 
     platform: sonic-vs
