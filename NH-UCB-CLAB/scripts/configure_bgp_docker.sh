@@ -158,7 +158,7 @@ configure_spine_bgp() {
     local router_id=""
     local neighbor1=""
     local neighbor2=""
-    
+
     if [ "$container_name" == "clab-nexthop-sonic-clos-spine1" ]; then
         router_id="1.1.1.1"
         neighbor1="10.0.1.1"  # leaf1
@@ -168,9 +168,9 @@ configure_spine_bgp() {
         neighbor1="10.0.1.3"  # leaf1
         neighbor2="10.0.2.3"  # leaf2
     fi
-    
+
     echo "Configuring BGP on $container_name (AS $asn)..."
-    
+
     docker exec $container_name vtysh -c "configure terminal" \
         -c "router bgp $asn" \
         -c "bgp router-id $router_id" \
@@ -179,6 +179,8 @@ configure_spine_bgp() {
         -c "neighbor $neighbor1 remote-as 65101" \
         -c "neighbor $neighbor2 remote-as 65102" \
         -c "address-family ipv4 unicast" \
+        -c "neighbor $neighbor1 activate" \
+        -c "neighbor $neighbor2 activate" \
         -c "redistribute connected" \
         -c "exit-address-family" \
         -c "exit" 2>&1 | grep -v "Unknown command" || true
@@ -198,7 +200,7 @@ configure_leaf_bgp() {
     local neighbor1=""
     local neighbor2=""
     local network=""
-    
+
     if [ "$container_name" == "clab-nexthop-sonic-clos-leaf1" ]; then
         router_id="11.11.11.11"
         neighbor1="10.0.1.0"  # spine1
@@ -210,9 +212,9 @@ configure_leaf_bgp() {
         neighbor2="10.0.2.2"  # spine2
         network="192.168.2.0/24"
     fi
-    
+
     echo "Configuring BGP on $container_name (AS $asn)..."
-    
+
     docker exec $container_name vtysh -c "configure terminal" \
         -c "router bgp $asn" \
         -c "bgp router-id $router_id" \
@@ -222,6 +224,8 @@ configure_leaf_bgp() {
         -c "neighbor $neighbor2 remote-as 65000" \
         -c "address-family ipv4 unicast" \
         -c "network $network" \
+        -c "neighbor $neighbor1 activate" \
+        -c "neighbor $neighbor2 activate" \
         -c "redistribute connected" \
         -c "exit-address-family" \
         -c "exit" 2>&1 | grep -v "Unknown command" || true

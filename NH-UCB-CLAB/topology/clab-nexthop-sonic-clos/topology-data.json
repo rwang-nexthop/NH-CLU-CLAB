@@ -6,7 +6,7 @@
       "prefix": "clab",
       "mgmt": {
         "network": "clab",
-        "bridge": "br-80dcefc5b139",
+        "bridge": "br-311b733a7294",
         "ipv4-subnet": "172.20.20.0/24",
         "ipv4-gw": "172.20.20.1",
         "ipv6-subnet": "3fff:172:20:20::/64",
@@ -29,13 +29,13 @@
       "image": "ghcr.io/srl-labs/alpine:latest",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.20.20.2",
+      "mgmt-ipv4-address": "172.20.20.6",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "3fff:172:20:20::2",
+      "mgmt-ipv6-address": "3fff:172:20:20::6",
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-80dcefc5b139",
+        "clab-mgmt-net-bridge": "br-311b733a7294",
         "clab-node-group": "",
         "clab-node-kind": "linux",
         "clab-node-lab-dir": "/Users/rwang/Python/Projects/NH-UCB-CLAB/topology/clab-nexthop-sonic-clos/host1",
@@ -78,13 +78,13 @@
       "image": "ghcr.io/srl-labs/alpine:latest",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.20.20.3",
+      "mgmt-ipv4-address": "172.20.20.2",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "3fff:172:20:20::3",
+      "mgmt-ipv6-address": "3fff:172:20:20::2",
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-80dcefc5b139",
+        "clab-mgmt-net-bridge": "br-311b733a7294",
         "clab-node-group": "",
         "clab-node-kind": "linux",
         "clab-node-lab-dir": "/Users/rwang/Python/Projects/NH-UCB-CLAB/topology/clab-nexthop-sonic-clos/host2",
@@ -127,13 +127,13 @@
       "image": "docker-sonic-vs:latest",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.20.20.4",
+      "mgmt-ipv4-address": "172.20.20.3",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "3fff:172:20:20::4",
+      "mgmt-ipv6-address": "3fff:172:20:20::3",
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-80dcefc5b139",
+        "clab-mgmt-net-bridge": "br-311b733a7294",
         "clab-node-group": "",
         "clab-node-kind": "sonic-vs",
         "clab-node-lab-dir": "/Users/rwang/Python/Projects/NH-UCB-CLAB/topology/clab-nexthop-sonic-clos/leaf1",
@@ -158,13 +158,13 @@
       "image": "docker-sonic-vs:latest",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.20.20.7",
+      "mgmt-ipv4-address": "172.20.20.4",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "3fff:172:20:20::7",
+      "mgmt-ipv6-address": "3fff:172:20:20::4",
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-80dcefc5b139",
+        "clab-mgmt-net-bridge": "br-311b733a7294",
         "clab-node-group": "",
         "clab-node-kind": "sonic-vs",
         "clab-node-lab-dir": "/Users/rwang/Python/Projects/NH-UCB-CLAB/topology/clab-nexthop-sonic-clos/leaf2",
@@ -189,13 +189,13 @@
       "image": "docker-sonic-vs:latest",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.20.20.5",
+      "mgmt-ipv4-address": "172.20.20.7",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "3fff:172:20:20::5",
+      "mgmt-ipv6-address": "3fff:172:20:20::7",
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-80dcefc5b139",
+        "clab-mgmt-net-bridge": "br-311b733a7294",
         "clab-node-group": "",
         "clab-node-kind": "sonic-vs",
         "clab-node-lab-dir": "/Users/rwang/Python/Projects/NH-UCB-CLAB/topology/clab-nexthop-sonic-clos/spine1",
@@ -220,13 +220,13 @@
       "image": "docker-sonic-vs:latest",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.20.20.6",
+      "mgmt-ipv4-address": "172.20.20.5",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "3fff:172:20:20::6",
+      "mgmt-ipv6-address": "3fff:172:20:20::5",
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-80dcefc5b139",
+        "clab-mgmt-net-bridge": "br-311b733a7294",
         "clab-node-group": "",
         "clab-node-kind": "sonic-vs",
         "clab-node-lab-dir": "/Users/rwang/Python/Projects/NH-UCB-CLAB/topology/clab-nexthop-sonic-clos/spine2",
@@ -246,13 +246,13 @@
       "a": {
         "node": "spine1",
         "interface": "eth1",
-        "mac": "aa:c1:ab:3e:39:e8",
+        "mac": "aa:c1:ab:2c:1a:dd",
         "peer": "z"
       },
       "z": {
         "node": "leaf1",
         "interface": "eth1",
-        "mac": "aa:c1:ab:db:62:03",
+        "mac": "aa:c1:ab:5b:01:93",
         "peer": "a"
       }
     },
@@ -260,13 +260,13 @@
       "a": {
         "node": "spine1",
         "interface": "eth2",
-        "mac": "aa:c1:ab:29:f7:47",
+        "mac": "aa:c1:ab:02:c8:38",
         "peer": "z"
       },
       "z": {
         "node": "leaf2",
         "interface": "eth1",
-        "mac": "aa:c1:ab:e6:f2:41",
+        "mac": "aa:c1:ab:39:dc:a4",
         "peer": "a"
       }
     },
@@ -274,13 +274,13 @@
       "a": {
         "node": "spine2",
         "interface": "eth1",
-        "mac": "aa:c1:ab:ba:26:35",
+        "mac": "aa:c1:ab:d9:ca:d4",
         "peer": "z"
       },
       "z": {
         "node": "leaf1",
         "interface": "eth2",
-        "mac": "aa:c1:ab:17:54:69",
+        "mac": "aa:c1:ab:6d:c6:27",
         "peer": "a"
       }
     },
@@ -288,13 +288,13 @@
       "a": {
         "node": "spine2",
         "interface": "eth2",
-        "mac": "aa:c1:ab:f0:f3:fb",
+        "mac": "aa:c1:ab:8b:59:34",
         "peer": "z"
       },
       "z": {
         "node": "leaf2",
         "interface": "eth2",
-        "mac": "aa:c1:ab:aa:44:66",
+        "mac": "aa:c1:ab:b5:4e:5a",
         "peer": "a"
       }
     },
@@ -302,13 +302,13 @@
       "a": {
         "node": "leaf1",
         "interface": "eth3",
-        "mac": "aa:c1:ab:e5:a9:1a",
+        "mac": "aa:c1:ab:0a:fe:ed",
         "peer": "z"
       },
       "z": {
         "node": "host1",
         "interface": "eth1",
-        "mac": "aa:c1:ab:3f:74:b2",
+        "mac": "aa:c1:ab:d9:93:bc",
         "peer": "a"
       }
     },
@@ -316,13 +316,13 @@
       "a": {
         "node": "leaf2",
         "interface": "eth3",
-        "mac": "aa:c1:ab:5e:14:da",
+        "mac": "aa:c1:ab:dd:96:e0",
         "peer": "z"
       },
       "z": {
         "node": "host2",
         "interface": "eth1",
-        "mac": "aa:c1:ab:d6:ef:98",
+        "mac": "aa:c1:ab:95:f9:3a",
         "peer": "a"
       }
     }
