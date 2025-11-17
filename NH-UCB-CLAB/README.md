@@ -33,6 +33,13 @@ A containerlab-based SONiC CLOS topology with 2 spines and 2 leaves, featuring B
                           │.1.10  │ │.2.10  │
                           └───────┘ └───────┘
 ```
+## Download SONiC image from the link below
+
+https://artprodcus3.artifacts.visualstudio.com/Af91412a5-a906-4990-9d7c-f697b81fc04d/be1b070f-be15-4154-aade-b1d3bfb17054/_apis/artifact/cGlwZWxpbmVhcnRpZmFjdDovL21zc29uaWMvcHJvamVjdElkL2JlMWIwNzBmLWJlMTUtNDE1NC1hYWRlLWIxZDNiZmIxNzA1NC9idWlsZElkLzk3ODQ2OS9hcnRpZmFjdE5hbWUvc29uaWMtYnVpbGRpbWFnZS52cw2/content?format=file&subpath=/target/docker-sonic-vs.gz
+
+OR enter site and download the docker-sonic-vs.gz image from Branch 202305
+
+https://sonic.software/
 
 ## 📋 Network Details
 
